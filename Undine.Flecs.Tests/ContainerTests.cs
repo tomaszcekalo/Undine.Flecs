@@ -16,6 +16,13 @@ namespace Undine.Flecs.Tests
         public void Init()
         {
         }
+        [TestMethod]
+        public void EntityCanBeDeleted()
+        {
+            var container = new FlecsContainer();
+            var entity = container.CreateNewEntity();
+            container.DeleteEntity(entity);
+        }
 
         [TestMethod]
         public void EntityCanBeCreated()
